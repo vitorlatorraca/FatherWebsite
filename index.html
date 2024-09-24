@@ -20,44 +20,52 @@
 
 </head>
 <body>
-    <!-- Header section starts -->
-    <header class="header">
-        <a href="#" class="logo"><span>SWFL Best Pavers Services</span></a>
+<!-- Header section starts -->
+<header class="header">
+    <a href="#" class="logo">
+        <img src="images/logo6.jpg" alt="SWFL Best Pavers Services">
+    </a>
 
-        <nav class="navbar">
-            <a href="#home">home</a>
-            <a href="#about">about</a>
-            <a href="#services">services</a>
-            <a href="#projects">projects</a>
-        </nav>
+    <div class="contact-info">
+        <span>Get in Touch with us</span>
+        <p>(239) 955-1444</p>
+    </div>
 
-        <div class="icons">
-            <div id="menu-btn" class="fas fa-bars"></div>
-            <div id="info-btn" class="fas fa-info-circle"></div>
-            <div id="search-btn" class="fas fa-search"></div>
-            <div id="login-btn" class="fas fa-user"></div>
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#services">services</a>
+        <a href="#projects">projects</a>
+    </nav>
+
+    <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="info-btn" class="fas fa-info-circle"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+        <div id="login-btn" class="fas fa-user"></div>
+    </div>
+
+    <!-- Search Form -->
+    <form action="" class="search-form">
+        <input type="search" placeholder="search here..." id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+
+    <!-- Login Form -->
+    <form action="" class="login-form">
+        <h3>login form</h3>
+        <input type="email" placeholder="enter your email" class="box">
+        <input type="password" placeholder="enter your password" class="box">
+        <div class="flex">
+            <input type="checkbox" id="remember-me">
+            <label for="remember-me"> remember me</label>
+            <a href="#"> forgot password</a>
         </div>
+        <input type="submit" value="login now" class="btn">
+        <p>don't have an account? <a href="#">create one!</a></p>
+    </form>
+</header>
 
-        <!-- Search Form -->
-        <form action="" class="search-form">
-            <input type="search" placeholder="search here..." id="search-box">
-            <label for="search-box" class="fas fa-search"></label>
-        </form>
-
-        <!-- Login Form -->
-        <form action="" class="login-form">
-            <h3>login form</h3>
-            <input type="email" placeholder="enter your email" class="box">
-            <input type="password" placeholder="enter your password" class="box">
-            <div class="flex">
-                <input type="checkbox" id="remember-me">
-                <label for="remember-me"> remember me</label>
-                <a href="#"> forgot password</a>
-            </div>
-            <input type="submit" value="login now" class="btn">
-            <p>don't have an account? <a href="#">create one!</a></p>
-        </form>
-    </header>
 
     <!-- Contact Info Section -->
     <div class="contact-info">
@@ -136,36 +144,6 @@
         </div>
     </section>
 
-    <section class="services" id="services">
-        <h1 class="heading">our services</h1>
-
-        <div class="box-container">
-            <div class="box">
-                <img src="images/services.jpeg" alt="">
-                <h3>building construction</h3>
-                <p>Our team of experts will help you build your dream home or office.</p>
-            </div>
-
-            <div class="box">
-                <img src="images/services.jpeg" alt="">
-                <h3>house renovation</h3>
-                <p>Our team of experts will help you build your dream home or office.</p>
-            </div>
-
-            <div class="box">
-                <img src="images/services.jpeg" alt="">
-                <h3>create your project with us</h3>
-                <p>Our team of experts will help you build your dream home or office.</p>
-            </div>
-
-            <div class="box">
-                <img src="images/services.jpeg" alt="">
-                <h3>learn more about our projects</h3>
-                <p>Our team of experts will help you build your dream home or office.</p>
-            </div>
-        </div>
-    </section>
-
     <section class="projects" id="projects">
         <h1 class="heading">our projects</h1>
         <div class="box-container">
@@ -210,120 +188,6 @@
         </div>
     </section>
     
-    
-
-    <!-- <section class="reviews">
-        <h1 class="heading">clients reviews</h1>
-    
-        <div class="swiper reviews-slider">
-            <div class="swiper-wrapper">
-    
-                <div class="swiper-slide slide">
-                    <p>Good paver service. I am glad that I hired them.</p>
-                    <div class="user">
-                        <img src="images/yuri.jpeg" alt="">
-                        <div class="info">
-                            <h3>Arrascaeta</h3>
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="swiper-slide slide">
-                    <p>They built my dream house!</p>
-                    <div class="user">
-                        <img src="images/yuri.jpeg" alt="">
-                        <div class="info">
-                            <h3>Diego</h3>
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="swiper-slide slide">
-                    <p>Fantastic service, they were very professional.</p>
-                    <div class="user">
-                        <img src="images/yuri.jpeg" alt="">
-                        <div class="info">
-                            <h3>Lucas</h3>
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="swiper-slide slide">
-                    <p>Great communication and finished ahead of schedule!</p>
-                    <div class="user">
-                        <img src="images/yuri.jpeg" alt="">
-                        <div class="info">
-                            <h3>Felipe</h3>
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="swiper-slide slide">
-                    <p>I highly recommend them for any project.</p>
-                    <div class="user">
-                        <img src="images/yuri.jpeg" alt="">
-                        <div class="info">
-                            <h3>Paulo</h3>
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="swiper-slide slide">
-                    <p>Exceptional work! I’m thrilled with the results.</p>
-                    <div class="user">
-                        <img src="images/yuri.jpeg" alt="">
-                        <div class="info">
-                            <h3>Bruno</h3>
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-            </div>
-        </div>
-    </section>-->
-
     <section class="contact-form">
 
         <h1 class="heading">Contact Us</h1>

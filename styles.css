@@ -133,18 +133,34 @@ section {
     background: var(--white);
 }
 
-.header .logo {
-    font-size: 2.5rem;
-    color: var(--black);
-    text-transform: capitalize;
+.header .logo img {
+    height: 5rem; /* Ajuste o tamanho da logo conforme necessário */
 }
 
-.header .logo span {
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.contact-info span {
+    font-size: 1.8rem;
+    color: var(--black);
+}
+
+.contact-info p {
+    font-size: 1.6rem;
+    font-weight: bold;
     color: var(--yellow);
 }
 
+.navbar {
+    display: flex;
+}
+
 .navbar a {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--black);
     text-transform: capitalize;
     margin: 0 1rem;
@@ -155,9 +171,9 @@ section {
 }
 
 .icons div {
-    height: 5rem;
-    width: 5rem;
-    line-height: 5rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
     font-size: 2rem;
     background: var(--light-bg);
     color: var(--black);
@@ -169,6 +185,7 @@ section {
 #menu-btn {
     display: none;
 }
+
 
 /* Estilo para o formulário de pesquisa */
 .search-form {
@@ -493,46 +510,6 @@ section {
     }
 }
 
-.services{
-    background: var(--light-bg);
-
-    .box-container{
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
-        gap: 1.5rem;
-
-        .box{
-            text-align: center;
-            padding: 3rem;
-            background: var(--white);
-            box-shadow: var(--box-shadow);
-            border: var(--border);
-
-            &:hover img{
-                transform: translateY(-1rem);
-            } 
-
-            img{
-                height: 7rem;
-                margin-bottom: .5rem;
-                transition: transform 0.3s ease;
-            }
-
-            h3{
-                font-size: 1.7rem;
-                font-weight: bold;
-                color: var(--black);
-                padding: 1rem 0;
-            }
-
-            p{
-                font-size: 1.4rem;
-                line-height: 1.8;
-                color: var(--gray);
-            }
-        }
-    }
-}
 
 .projects {
     background: var(--black);
