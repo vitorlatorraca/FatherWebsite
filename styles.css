@@ -965,36 +965,26 @@ section {
     }
 
     @media only screen and (max-width: 451px) {
-        /* Esconde todos os catálogos */
-        .catalogo {
-            display: none;
+        /* Configura a exibição das caixas para serem empilhadas */
+        .box {
+            display: block; /* Cada catálogo ocupa uma linha completa */
+            margin-bottom: 1rem; /* Espaçamento entre os catálogos */
         }
     
-        /* Exibe apenas o primeiro catálogo */
-        .catalogo:first-child {
-            display: block;
-        }
-    
-        /* Adiciona um botão para navegação entre os catálogos */
-        .catalogo-navigation {
+        /* Opcional: ajusta a largura da caixa para a tela */
+        .box-container {
             display: flex;
-            justify-content: center;
-            margin: 1rem 0;
-        }
-    
-        .catalogo-navigation button {
-            padding: 0.5rem 1rem;
-            margin: 0 0.5rem;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    
-        .catalogo-navigation button:hover {
-            background-color: #0056b3;
+            flex-direction: column; /* Empilha os catálogos verticalmente */
+            align-items: center; /* Centraliza os catálogos */
         }
     }
     
-}
+    /* Estilo padrão para dispositivos maiores */
+    @media only screen and (min-width: 452px) {
+        .box {
+            display: block; /* Mostra todos os catálogos na versão desktop */
+        }
+    }
+    
+    
+}    
