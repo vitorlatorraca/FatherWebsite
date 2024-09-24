@@ -564,70 +564,189 @@ section {
     }
 }
 
-
-
-
-.reviews {
-    .slide {
-        p {
-            padding: 1.5rem;
-            background-color: var(--light-bg);
-            position: relative;
-            margin-bottom: 3rem;
-            font-size: 1.5rem;
-            line-height: 1.6;
-            color: var(--black);
-
-            &::before {
-                content: '';
-                position: absolute;
-                bottom: -1rem;
-                left: 2rem;
-                height: 2rem;
-                width: 2rem;
-                background: var(--light-bg);
-                transform: rotate(45deg);
-            }
-        }
-
-        .user {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-
-            img {
-                height: 7rem;
-                width: 7rem;
-                border-radius: 50%;
-            }
-
-            h3 {
-                font-size: 1.7rem;
-                font-weight: bold;
-                color: var(--black);
-                text-transform: uppercase;
-            }
-
-            .stars {
-                padding: 0.5rem;
-
-                i {
-                    font-size: 1.5rem;
-                    color: var(--yellow);
-                }
-            }
-        }
-    }
-}
-
+/* Estilo da seção do formulário de contato */
 .contact-form {
-    padding: 3rem 1rem;
-    background-color: var(--light-bg);
-    max-width: 600px;
-    margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* Define a largura máxima do formulário */
+    margin: 0 auto; /* Centraliza o formulário */
+    padding: 20px; /* Adiciona espaçamento interno */
+    background-color: #f9f9f9; /* Cor de fundo do formulário */
+    border-radius: 8px; /* Cantos arredondados do formulário */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
+
+.contact-form h1 {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+.input-box {
+    margin-bottom: 15px; /* Espaçamento entre os campos do formulário */
+}
+
+.input-box label {
+    display: block; /* Faz o rótulo ocupar toda a largura */
+    margin-bottom: 5px; /* Espaçamento abaixo do rótulo */
+    font-weight: bold; /* Deixa o rótulo em negrito */
+}
+
+.input-box input,
+.input-box select,
+.input-box textarea {
+    width: 100%; /* Largura total dos campos */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda padrão */
+    border-radius: 4px; /* Cantos arredondados */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Estilo do botão de submit */
+.submit-button {
+    background-color: black; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    padding: 12px 20px; /* Espaçamento interno */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Cantos arredondados */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    transition: background-color 0.3s ease; /* Transição suave */
+    width: 100%; /* Largura total do botão */
+    margin-top: 10px; /* Espaçamento acima do botão */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.submit-button:hover {
+    background-color: yellow; /* Cor do botão ao passar o mouse */
+    color: black; /* Cor do texto ao passar o mouse */
+}
+
+
+/* Estilo do cabeçalho */
+.contact-form .heading {
+    font-size: 24px; /* Tamanho da fonte do cabeçalho */
+    margin-bottom: 20px; /* Espaço abaixo do cabeçalho */
+    text-align: center; /* Centraliza o cabeçalho */
+}
+
+/* Estilo das caixas de entrada */
+.input-box {
+    margin-bottom: 20px; /* Espaço abaixo de cada caixa */
+}
+
+/* Estilo do rótulo */
+.input-box label {
+    font-weight: bold; /* Negrito */
+    margin-bottom: 5px; /* Espaço abaixo do rótulo */
+    display: block; /* Faz o rótulo ocupar toda a linha */
+}
+
+/* Estilo dos inputs e textarea */
+.input-box input,
+.input-box textarea,
+.input-box select {
+    width: 100%; /* Largura total */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda padrão */
+    border-radius: 5px; /* Cantos arredondados */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: border-color 0.3s; /* Transição suave para a borda */
+}
+
+/* Efeito ao focar nos inputs e textarea */
+.input-box input:focus,
+.input-box textarea:focus,
+.input-box select:focus {
+    border-color: #007BFF; /* Cor da borda ao focar */
+}
+
+/* Estilo do botão de submit */
+.submit-btn {
+    background-color: black; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    padding: 12px 20px; /* Espaçamento interno */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Cantos arredondados */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    transition: background-color 0.3s ease; /* Transição suave */
+    width: 100%; /* Largura total do botão */
+    margin-top: 10px; /* Espaçamento acima do botão */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.submit-btn:hover {
+    background-color: rgb(0, 0, 0); /* Cor do botão ao passar o mouse */
+    color: black; /* Cor do texto ao passar o mouse */
+}
+
+
+
+/* Estilo do rótulo e selecione */
+#contact-form label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block; /* Faz o rótulo ocupar toda a linha */
+}
+
+#contact-form select {
+    width: 100%;
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 20px; /* Espaço abaixo do select */
+    border: 1px solid #ccc; /* Borda padrão */
+    border-radius: 5px; /* Cantos arredondados */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Estilo do botão de submit */
+.submit-btn {
+    background-color: black; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    padding: 12px 20px; /* Espaçamento interno */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Cantos arredondados */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.submit-btn:hover {
+    background-color: yellow; /* Cor do botão ao passar o mouse */
+}
+
+
+/* Estilo do rótulo e selecione */
+#contact-form label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block; /* Faz o rótulo ocupar toda a linha */
+}
+
+#contact-form select {
+    width: 100%;
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 20px; /* Espaço abaixo do select */
+    border: 1px solid #ccc; /* Borda padrão */
+    border-radius: 5px; /* Cantos arredondados */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Estilo do botão de submit */
+.submit-btn {
+    background-color: #4CAF50; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    padding: 12px 20px; /* Espaçamento interno */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Cantos arredondados */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.submit-btn:hover {
+    background-color: #45a049; /* Cor do botão ao passar o mouse */
+}
+
 
 .contact-form h1 {
     text-align: center;
@@ -844,4 +963,38 @@ section {
         font-size: 1.2rem;
         line-height: 3rem;
     }
+
+    @media only screen and (max-width: 451px) {
+        /* Esconde todos os catálogos */
+        .catalogo {
+            display: none;
+        }
+    
+        /* Exibe apenas o primeiro catálogo */
+        .catalogo:first-child {
+            display: block;
+        }
+    
+        /* Adiciona um botão para navegação entre os catálogos */
+        .catalogo-navigation {
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+    
+        .catalogo-navigation button {
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    
+        .catalogo-navigation button:hover {
+            background-color: #0056b3;
+        }
+    }
+    
 }
