@@ -459,6 +459,7 @@ section {
 
         .image {
             flex: 1 1 41rem;
+            border-radius: 5rem;
 
             img { /* Mudamos de video para img */
                 width: 100%;
@@ -488,24 +489,30 @@ section {
 
 
 
-.projects {
-    background: var(--black);
+.catalogos {
+    background: var(--white); /* Altere para um fundo claro */
+    padding: 2rem; /* Adiciona espaço ao redor da seção */
 
     .heading {
-        color: var(--white);
+        color: var(--black);
+        text-align: center; /* Centraliza o título */
+        margin-bottom: 2rem; /* Espaço abaixo do título */
     }
 
     .box-container {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
-        gap: 1.5rem;
+        grid-template-columns: repeat(3, 1fr); /* Para 3 catálogos distribuídos igualmente */
+        gap: 2rem; /* Aumenta o espaço entre os catálogos */
 
         .box {
             cursor: pointer;
-
-            &:hover .image img {
-                transform: scale(1.1);
-                transition: transform 0.3s ease;
+            border-radius: 10px; /* Adiciona borda arredondada */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
+            overflow: hidden; /* Impede que o conteúdo exceda o limite da borda arredondada */
+            transition: transform 0.3s ease; /* Suaviza a transição ao passar o mouse */
+        
+            &:hover {
+                transform: translateY(-5px); /* Levanta o catálogo ao passar o mouse */
             }
 
             .image {
@@ -516,7 +523,7 @@ section {
                     height: 100%;
                     width: 100%;
                     object-fit: cover;
-                    transition: transform 0.3s ease; /* Transição suave aplicada aqui */
+                    transition: transform 0.3s ease;
                     cursor: pointer;
                 }
             }
@@ -531,13 +538,13 @@ section {
                     padding: 1rem 2rem;
 
                     h3 {
-                        font-size: 1.5rem; /* Diminuído mais */
+                        font-size: 1.5rem;
                         font-weight: bold;
                         color: var(--black);
                     }
 
                     p {
-                        font-size: 1.2rem; /* Diminuído mais */
+                        font-size: 1.2rem;
                         line-height: 1.6;
                         color: var(--light-color);
                     }
@@ -556,6 +563,7 @@ section {
         }
     }
 }
+
 
 
 
