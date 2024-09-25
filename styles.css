@@ -91,17 +91,45 @@ section {
     border-left: 1rem solid var(--yellow);
 }
 
+/* Estilo básico do botão */
+.button {
+    background-color: #000000; /* Cor de fundo verde */
+    color: white; /* Cor do texto em branco */
+    padding: 15px 32px; /* Espaçamento interno do botão */
+    text-align: center; /* Centraliza o texto */
+    text-decoration: none; /* Remove sublinhado */
+    display: inline-block; /* Permite definir largura e altura */
+    font-size: 16px; /* Tamanho da fonte */
+    margin: 4px 2px; /* Margem em volta do botão */
+    cursor: pointer; /* Cursor em forma de mão ao passar o mouse */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s, transform 0.2s; /* Transição suave para cor de fundo e transformação */
+}
+
+/* Estilo do botão ao passar o mouse */
+.button:hover {
+    background-color: #45a049; /* Cor de fundo mais escura ao passar o mouse */
+    transform: scale(1.05); /* Aumenta o tamanho do botão levemente */
+}
+
+/* Estilo do botão ao ser pressionado */
+.button:active {
+    transform: scale(0.95); /* Diminui o tamanho do botão ao ser pressionado */
+}
+
 
 .btn {
     display: inline-block;
-    margin-top: 1rem;
-    padding: 1rem 3rem;
-    background: var(--black);
-    color: var(--white);
-    cursor: pointer;
-    font-size: 1.7rem;
-    text-transform: capitalize;
-}
+    background-color: #000000; /* Cor de fundo do botão */
+    color: white;
+    padding: 10px 20px; /* Ajuste o padding conforme necessário */
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    width: auto; /* O botão terá o tamanho do conteúdo */
+    white-space: nowrap; /* Garante que o texto não quebre */
+  }
 
 .btn:hover {
     background: var(--yellow);
@@ -421,34 +449,42 @@ section {
     line-height: 2;
 }
 
+/* Estilo para os botões de navegação do Swiper */
 .swiper-button-prev,
 .swiper-button-next {
-    top: initial;
-    bottom: 0;
-    left: initial;
-    right: 0;
-    height: 7rem;
-    width: 7rem;
-    line-height: 7rem;
-    font-size: 3rem;
-    background: var(--white);
-    transition: background 0.3s ease; /* Adiciona uma transição suave para a mudança de cor */
+    position: absolute; /* Permite posicionar os botões em relação ao contêiner pai */
+    top: 50%; /* Centraliza verticalmente os botões */
+    transform: translateY(-50%); /* Ajusta para que a metade do botão fique no centro */
+    height: 7rem; /* Altura do botão */
+    width: 7rem; /* Largura do botão */
+    line-height: 7rem; /* Centraliza o texto verticalmente */
+    font-size: 3rem; /* Tamanho da fonte */
+    background: var(--white); /* Cor de fundo */
+    transition: background 0.3s ease; /* Transição suave para a mudança de cor */
+    z-index: 10; /* Certifica que os botões estão na frente da imagem */
 }
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-    background: var(--yellow);
+    background: var(--yellow); /* Muda a cor de fundo ao passar o mouse */
 }
 
 .swiper-button-next::after,
-.swiper-button-prev::after{
-    font-size: 2rem;
-    color: var(--black);
+.swiper-button-prev::after {
+    font-size: 2rem; /* Tamanho da fonte dos ícones */
+    color: var(--black); /* Cor do ícone */
 }
 
-.swiper-button-prev{
-    right: 7rem;
+/* Ajusta a posição do botão anterior (prev) */
+.swiper-button-prev {
+    left: 2rem; /* Distância da borda esquerda */
 }
+
+/* Ajusta a posição do botão próximo (next) */
+.swiper-button-next {
+    right: 2rem; /* Distância da borda direita */
+}
+
 
 .about {
     .row {
@@ -930,10 +966,32 @@ section {
     }
 }
 
-/* Para telas de até 450px de largura */
+/* Estilo global */
+/* Adicione seu estilo global aqui, se necessário */
+
+/* Para telas de até 450px */
 @media (max-width: 450px) {
-    html {
-        font-size: 45%;
+    .box-container {
+        display: flex;
+        flex-direction: column; /* Empilha os catálogos verticalmente */
+        align-items: center; /* Centraliza os catálogos */
+        width: 100%; /* Garante que o contêiner ocupe a largura total */
+    }
+
+    .box {
+        display: block; /* Cada catálogo ocupa uma linha completa */
+        width: 100%; /* Ajusta a largura das caixas para 100% */
+        margin: 0; /* Remove margem lateral */
+        margin-bottom: 1rem; /* Espaçamento entre os catálogos */
+        overflow: hidden; /* Esconde qualquer conteúdo que exceda as dimensões do box */
+    }
+
+    /* Para garantir que as imagens se ajustem */
+    .box .image img {
+        width: 100%; /* Faz com que a imagem ocupe a largura total da caixa */
+        height: auto; /* Mantém a proporção da imagem */
+        max-height: 200px; /* Define uma altura máxima para as imagens */
+        object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
     }
 
     .header {
@@ -963,28 +1021,6 @@ section {
         font-size: 1.2rem;
         line-height: 3rem;
     }
+}
 
-    @media only screen and (max-width: 451px) {
-        /* Configura a exibição das caixas para serem empilhadas */
-        .box {
-            display: block; /* Cada catálogo ocupa uma linha completa */
-            margin-bottom: 1rem; /* Espaçamento entre os catálogos */
-        }
-    
-        /* Opcional: ajusta a largura da caixa para a tela */
-        .box-container {
-            display: flex;
-            flex-direction: column; /* Empilha os catálogos verticalmente */
-            align-items: center; /* Centraliza os catálogos */
-        }
-    }
-    
-    /* Estilo padrão para dispositivos maiores */
-    @media only screen and (min-width: 452px) {
-        .box {
-            display: block; /* Mostra todos os catálogos na versão desktop */
-        }
-    }
-    
-    
-}    
+
