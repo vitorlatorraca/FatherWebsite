@@ -454,19 +454,19 @@ section {
 .swiper-button-next {
     position: absolute; /* Permite posicionar os botões em relação ao contêiner pai */
     top: 50%; /* Centraliza verticalmente os botões */
-    transform: translateY(-50%); /* Ajusta para que a metade do botão fique no centro */
-    height: 7rem; /* Altura do botão */
-    width: 7rem; /* Largura do botão */
+    transform: translateY(+450%); /* Ajusta para que a metade do botão fique no centro */
+    height: 4rem; /* Altura do botão */
+    width: 4rem; /* Largura do botão */
     line-height: 7rem; /* Centraliza o texto verticalmente */
     font-size: 3rem; /* Tamanho da fonte */
-    background: var(--white); /* Cor de fundo */
+    background: var(--yellow); /* Cor de fundo */
     transition: background 0.3s ease; /* Transição suave para a mudança de cor */
     z-index: 10; /* Certifica que os botões estão na frente da imagem */
 }
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-    background: var(--yellow); /* Muda a cor de fundo ao passar o mouse */
+    background: red; /* Muda a cor de fundo ao passar o mouse */
 }
 
 .swiper-button-next::after,
@@ -528,73 +528,78 @@ section {
 .catalogos {
     background: var(--white); /* Altere para um fundo claro */
     padding: 2rem; /* Adiciona espaço ao redor da seção */
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se ajustem em múltiplas linhas */
+    justify-content: center; /* Centraliza os itens */
 
     .heading {
         color: var(--black);
         text-align: center; /* Centraliza o título */
         margin-bottom: 2rem; /* Espaço abaixo do título */
+        width: 100%; /* Título ocupa toda a largura */
     }
 
     .box-container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* Para 3 catálogos distribuídos igualmente */
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Colunas responsivas */
         gap: 2rem; /* Aumenta o espaço entre os catálogos */
+        width: 100%; /* Garante que o contêiner ocupe a largura total */
+    }
 
-        .box {
-            cursor: pointer;
-            border-radius: 10px; /* Adiciona borda arredondada */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
-            overflow: hidden; /* Impede que o conteúdo exceda o limite da borda arredondada */
-            transition: transform 0.3s ease; /* Suaviza a transição ao passar o mouse */
-        
-            &:hover {
-                transform: translateY(-5px); /* Levanta o catálogo ao passar o mouse */
+    .box {
+        cursor: pointer;
+        border-radius: 10px; /* Adiciona borda arredondada */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
+        overflow: hidden; /* Impede que o conteúdo exceda o limite da borda arredondada */
+        transition: transform 0.3s ease; /* Suaviza a transição ao passar o mouse */
+
+        &:hover {
+            transform: translateY(-5px); /* Levanta o catálogo ao passar o mouse */
+        }
+
+        .image {
+            height: 40vh; /* Ajuste a altura da imagem usando uma unidade relativa */
+            overflow: hidden;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+                cursor: pointer;
+            }
+        }
+
+        .content {
+            display: flex;
+            gap: .5rem;
+            background: var(--white);
+            justify-content: space-between;
+
+            .info {
+                padding: 1rem 2rem;
+
+                h3 {
+                    font-size: 1.5rem; /* Tamanho de fonte responsivo */
+                    font-weight: bold;
+                    color: var(--black);
+                }
+
+                p {
+                    font-size: 1.2rem;
+                    line-height: 1.6;
+                    color: var(--light-color);
+                }
             }
 
-            .image {
-                height: 40rem;
-                overflow: hidden;
-
-                img {
-                    height: 100%;
-                    width: 100%;
-                    object-fit: cover;
-                    transition: transform 0.3s ease;
-                    cursor: pointer;
-                }
-            }
-
-            .content {
-                display: flex;
-                gap: .5rem;
-                background: var(--white);
-                justify-content: space-between;
-
-                .info {
-                    padding: 1rem 2rem;
-
-                    h3 {
-                        font-size: 1.5rem;
-                        font-weight: bold;
-                        color: var(--black);
-                    }
-
-                    p {
-                        font-size: 1.2rem;
-                        line-height: 1.6;
-                        color: var(--light-color);
-                    }
-                }
-
-                i {
-                    width: 7.5rem;
-                    font-size: 3rem;
-                    background: var(--yellow);
-                    color: var(--white);
-                    cursor: pointer;
-                    text-align: center;
-                    line-height: 7.5rem;
-                }
+            i {
+                width: 7.5rem; /* Pode ser ajustado conforme necessário */
+                font-size: 3rem;
+                background: var(--yellow);
+                color: var(--white);
+                cursor: pointer;
+                text-align: center;
+                line-height: 7.5rem; /* Alinha verticalmente o ícone */
             }
         }
     }
