@@ -454,7 +454,7 @@ section {
 .swiper-button-next {
     position: absolute; /* Permite posicionar os botões em relação ao contêiner pai */
     top: 50%; /* Centraliza verticalmente os botões */
-    transform: translateY(+450%); /* Ajusta para que a metade do botão fique no centro */
+    transform: translateY(+451%); /* Ajusta para que a metade do botão fique no centro */
     height: 4rem; /* Altura do botão */
     width: 4rem; /* Largura do botão */
     line-height: 7rem; /* Centraliza o texto verticalmente */
