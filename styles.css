@@ -849,6 +849,75 @@ section {
     background-color: var(--black);
 }
 
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer .share a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.footer .share a:hover {
+    color: #ff5722; /* Altere para a cor de destaque da sua página */
+}
+
+.footer .contact-info {
+    margin: 20px 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.footer .contact-info a {
+    color: #ff5722;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer .contact-info a:hover {
+    color: #fff;
+}
+
+.footer .credit {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.footer .credit span {
+    color: #ff5722; /* Cor do destaque */
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px 10px;
+    }
+
+    .footer .contact-info {
+        font-size: 14px;
+    }
+
+    .footer .share a {
+        font-size: 16px;
+        margin: 0 5px;
+    }
+
+    .footer .credit {
+        font-size: 12px;
+    }
+}
+
 
 
 /* Media Queries */
