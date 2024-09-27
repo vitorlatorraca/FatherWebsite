@@ -8,6 +8,10 @@
     --light-bg: #eee;
     --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
     --border: .1rem solid rgba(0,0,0,.3);
+    --dark-bg: #121212; /* Cor de fundo bem escura para contraste */
+    --light-text: #F0F0F0; /* Cor de texto claro para legibilidade */
+    --accent-color: #FFA500; /* Laranja suave como cor secundária */
+    --font-family: 'Poppins', sans-serif; /* Tipografia moderna */
 }
 
 * {
@@ -850,10 +854,11 @@ section {
 }
 
 .footer {
-    background-color: #222;
-    color: #fff;
-    padding: 20px;
+    background-color: var(--light-bg); /* Fundo claro */
+    color: var(--dark-text); /* Texto escuro */
+    padding: 40px 20px;
     text-align: center;
+    font-family: var(--font-family);
 }
 
 .footer .container {
@@ -862,59 +867,69 @@ section {
 }
 
 .footer .share a {
-    color: #fff;
-    margin: 0 10px;
-    font-size: 18px;
-    transition: color 0.3s ease;
+    color: var(--dark-text); /* Ícones escuros */
+    margin: 0 15px;
+    font-size: 24px;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .footer .share a:hover {
-    color: #ff5722; /* Altere para a cor de destaque da sua página */
+    color: var(--yellow); /* Efeito hover com amarelo */
+    transform: scale(1.2);
 }
 
-.footer .contact-info {
-    margin: 20px 0;
-    font-size: 16px;
-    line-height: 1.6;
+.footer .contact-infos {
+    margin: 30px 0;
+    font-size: 18px;
+    line-height: 1.8;
 }
 
-.footer .contact-info a {
-    color: #ff5722;
+.footer .contact-infos p {
+    margin: 5px 0;
+    color: var(--dark-text); /* Texto escuro */
+}
+
+.footer .contact-infos a {
+    color: var(--dark-text); /* Link escuro */
     text-decoration: none;
+    font-weight: bold;
     transition: color 0.3s ease;
 }
 
-.footer .contact-info a:hover {
-    color: #fff;
+.footer .contact-infos a:hover {
+    color: var(--accent-color); /* Efeito hover com laranja */
 }
 
 .footer .credit {
-    font-size: 14px;
+    font-size: 16px;
     margin-top: 20px;
+    color: var(--dark-text); /* Texto escuro */
 }
 
 .footer .credit span {
-    color: #ff5722; /* Cor do destaque */
-    font-weight: bold;
+    color: var(--yellow); /* Amarelo no nome */
+    font-weight: 600;
+    letter-spacing: 1px;
 }
+
 
 /* Responsividade */
 @media (max-width: 768px) {
     .footer {
-        padding: 20px 10px;
+        padding: 30px 15px;
     }
 
-    .footer .contact-info {
-        font-size: 14px;
+    .footer .contact-infos {
+        font-size: 16px;
     }
 
     .footer .share a {
-        font-size: 16px;
-        margin: 0 5px;
+        font-size: 20px;
+        margin: 0 10px;
     }
 
     .footer .credit {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
